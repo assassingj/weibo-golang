@@ -49,7 +49,8 @@ func buildExistenceMap(weiboClient *sinaweibo.WeiboClient, uid string) map[int64
 }
 
 func main() {
-	weiboAuth := sinaweibo.WeiboAuth{"xxx", "yyy", "www.lovelin.info"}
+	weiboAuth := sinaweibo.WeiboAuth{"your-app-key", "your-app-secret", "redirect-url"}
+	fmt.Printf("please explore url %s\n", weiboAuth.GetAuthorizeUrl())
 	var code string
 	fmt.Println("please input your code:")
 	fmt.Scanf("%s", &code)
